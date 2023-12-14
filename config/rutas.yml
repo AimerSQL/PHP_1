@@ -1,0 +1,70 @@
+# rutas.yml
+---
+ruta_raíz:
+    path:     /
+    controller: 'funcionHomePage'
+    methods:   [ GET ]
+
+ruta_user_list:
+    path:     /users
+    controller: 'funcionListadoUsuarios'
+    methods:
+      - GET
+
+ruta_result_list:
+    path:     /results
+    controller: 'funcionListadoResultados'
+    methods:
+        - GET
+
+ruta_create_user:
+    path:     /create_user
+    controller: 'funcionCrearUsuario'
+    methods:
+        - GET
+        - POST
+
+ruta_delete_user:
+    path:     /delete_user
+    controller: 'funcionEliminarUsuario'
+    methods:
+        - GET
+        - POST
+
+ruta_create_result:
+    path:     /create_result
+    controller: 'funcionCrearResultado'
+    methods:
+        - GET
+        - POST
+
+ruta_delete_result:
+    path:     /delete_result
+    controller: 'funcionEliminarResultado'
+    methods:
+        - GET
+        - POST
+        -
+ruta_update_user:
+    path:     /update_user
+    controller: 'funcionActualizarUsuario'
+    methods:
+        - GET
+        - POST
+
+ruta_update_result:
+    path:     /update_result_by_user
+    controller: 'funcionActualizarResultado'
+    methods:
+        - GET
+        - POST
+
+
+ruta_user:
+    path:     /users/{name}
+    controller: 'funcionUsuario'
+    defaults:
+        name: _default_
+    methods:
+        - GET
+        - DELETE
